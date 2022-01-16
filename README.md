@@ -38,3 +38,29 @@ Der Standard-Aufbau von CLion ist übersichtlich:
 - Im **oberen** Bereich lässt sich das Projekt ausführen, bauen und Tests ausführen.
 - Im **unteren** Bereich gibt es, aufklappbar, wichtige Tools wie *Problems* zur Anzeige von Problemen, *Terminal* zur Ausführung von Befehlen.
 - Im **rechten** bzw **mittleren** Bereich kann der Projekt-Code eingegeben werden.
+
+## Der erste Code
+
+Beim Start istsind bereits 6 Zeilen Code eingegeben:
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}
+```
+
+Der Beispiel-Code kann mit dem Klick auf den grünen Pfeil vor der `main`-Funktion ausgeführt werden (**Run first project**). Dabei öffnet sich der **Run**-Tabulator unterhalb und gibt folgendes aus:
+```sh
+/home/david/cpp/first-project/cmake-build-debug/first_project
+Hello, World!
+
+Process finished with exit code 0
+```
+
+Die Code-Zeilen werden hier erklärt:
+- `int main() { ... }` definiert die Hauptfunktion, die beim Programmstart geladen wird
+- `std::cout << "Hello, World!" << std.endl;` (Standard-C-Out) schreibe auf die Console alles was nach `<<` erscheint. Mehrere Zeichen können mit weiteren `<<` verbunden werden. `std.endl` fügt einen Zeilenumbruch ein.
+- `return 0` beendet die `main`-Funktion und gibt den Wert `0` zurück. Dabei ist `0` die Information, dass alles planmäßig verlaufen ist. Der Code `1` würde darauf hinweisen, dass ein Fehler passiert ist.
