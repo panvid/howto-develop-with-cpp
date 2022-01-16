@@ -28,3 +28,13 @@ Nachdem **C++ Executable** für ein eigenständiges C++-Programm gewählt wird k
 - **C++23**: Noch in Entwicklung befindliche C++-Version, mit Funktionalitäten wie *Reflections* und *Pattern Matching*
 
 Es wird ein Projektordner ausgewählt sowie die letzte aktuelle Version von C++, **C++20**.
+
+## Aufbau von CLion
+
+![Leeres neues Projekt](https://raw.githubusercontent.com/panvid/howto-develop-with-cpp/main/img/new-project.png)
+
+Der Standard-Aufbau von CLion ist übersichtlich:
+- Im **linken** Bereich sind alle *Projektdateien* dieses Projektes sichtbar. Daneben werden auch *Externe Libraries* angezeigt, die aufgerufen, aber nicht geändert werden können.
+- Im **oberen** Bereich lässt sich das Projekt ausführen, bauen und Tests ausführen.
+- Im **unteren** Bereich gibt es, aufklappbar, wichtige Tools wie *Problems* zur Anzeige von Problemen, *Terminal* zur Ausführung von Befehlen.
+- Im **rechten** bzw **mittleren** Bereich kann der Projekt-Code eingegeben werden.
