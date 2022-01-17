@@ -147,3 +147,79 @@ Damit passen mehr Werte in eine Variable
 | bool | Wahr oder falsch / true oder false. |
 | void | nichts |
 | decltype(nullptr) | Null pointer |
+
+### Zeichenketten
+
+In C++ lassen sich auch komplette Zeichenketten aus mehreren Zeichen speichern. Diese Zeichenketten, *string*s, benötigen eine eigenes eingebundes Paket `#include <string>`.
+
+```cpp
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+    string myString;
+    myString = "Das ist eine Zeichenkette.";
+    cout << myString;
+
+    return 0;
+}
+```
+
+## Konstanten
+
+Wenn Variablen dauerhaft einen unveränderlichen Wert definiert haben heißen diese Konstanten. Sie werden durch das Schlüsselwort `const` deklariert.
+
+```cpp
+#include <iostream>
+
+using namespace std;
+
+const double pi = 3.14159;
+const char linebreak = '\n';
+
+int main()
+{
+    double radius = 5.0;
+    double circle;
+
+    circle = 2 * pi * radius;
+    cout << circle;
+    cout << linebreak;
+
+    return 0;
+}
+```
+
+## Operatoren
+
+Auf Werte und Variablen lassen sich Operatoren anwenden. Diese sind in folgender Tabelle definiert.
+
+| Typus | Beispiel | Beschreibung |
+| --- | --- | --- |
+| Zuweisung | `x = 5;` | Wert wird gespeichert |
+| Addition | `sum = a + 3;` | Werte werden addiert |
+| Substraktion | `sub = a - 3;` | Werte werden substrahiert |
+| Multiplikation | `mul = a * 3;` | Werte werden multipliziert |
+| Division | `div = a / 3;` | Werte werden dividiert |
+| Modulo | `mod = a % 3;` | Werte werden dividiert, der Rest wird gespeichert |
+| Addition & Zuweisung | `sum += 3;` | Wert wird mit anderen Wert addiert und auf denselben Wert gespeichert: `sum = sum + 3;` |
+| Substraktion & Zuweisung | `sub -= 3;` | Wert wird mit anderen Wert subtrahiert und auf denselben Wert gespeichert: `sub = sub - 3;` |
+| Multiplikation & Zuweisung | `mul *= 3;` | Wert wird mit anderen Wert mulipliziert und auf denselben Wert gespeichert: `mul = mul * 3;` |
+| Division & Zuweisung | `div /= 3;` | Wert wird mit anderen Wert dividiert und auf denselben Wert gespeichert: `div = div / 3;` |
+| Modulo & Zuweisung | `mod %= 3;` | Wert wird mit anderen Wert dividiert, der Rest gespeichert, und auf denselben Wert gespeichert: `mod = mod % 3;` |
+| Inkrement | `value++;` | Wert wird um 1 erhöht: `value = value + 1;` |
+| Dekrement | `value--;` | Wert wird um 1 verringert: `value = value - 1;` |
+| Vergleich | `(a == b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| Ungleich | `(a != b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| kleiner als | `(a < b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| größer als | `(a > b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| kleiner oder gleich als | `(a <= b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| größer oder gleich als | `(a >= b)` | Werte werden verglichen, es wird `true` oder `false` ersetzt |
+| Negation | `!value` | Wert wird negiert, es wird `true` oder `false` ersetzt |
+| UND | `a && b` | Werte werden mit UND vergleichen, es wird `true` oder `false` ersetzt |
+| ODER | `a || b` | Werte werden mit ODER vergleichen, es wird `true` oder `false` ersetzt |
+| Abfrage-Operator | `result = (operation == 'add') ? a + b : a - b;` | Entscheidungs-Operator, wenn *wahr* dann wird nach `?` genutzt, wenn *falsch* `:` |
+| Casting | `ganzzahl = (int) 3.141` | Wandle einen Datentyp in einen anderen um. |
